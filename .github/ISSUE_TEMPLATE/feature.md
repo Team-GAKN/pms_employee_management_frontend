@@ -2,7 +2,7 @@
 name: Feature
 about: Add a feature
 title: ''
-labels: ''
+labels: feature
 assignees: ''
 
 ---

@@ -1,9 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { ButtonVariant } from './buttonVariants'; // Adjust the import path as needed
+import { ButtonVariant } from './buttonVariants';
+import { CommonModule } from "@angular/common"; // Adjust the import path as needed
 
 @Component({
   selector: 'app-button',
   templateUrl: './app-button.component.html',
+  imports: [CommonModule],
   standalone: true,
   styleUrls: ['./app-button.component.scss']
 })

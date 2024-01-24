@@ -7,38 +7,14 @@
   <!-- Füge hier die Links zu den Stylesheets, JavaScript-Dateien oder anderen externen Ressourcen hinzu -->
   <header>
 
-  </header>
+</header>
 </head>
 
-<nav>
-  <!-- Hier könntest du eine Navigationsleiste einfügen -->
-  <ul>
-    <li><a href="#">Startseite</a></li>
-    <li><a href="#">Über uns</a></li>
-    <li><a href="#">Kontakt</a></li>
-  </ul>
-</nav>
+<app-navbar navbarText="Employee Management Service">
+  <app-button [btnClass]="ButtonVariant.Success" buttonText="Mitarbeiter anlegen"></app-button>
+  <app-button [btnClass]="ButtonVariant.Danger" buttonText="Logout"></app-button>
+</app-navbar>
 
-<main>
-  <!-- Der Hauptinhalt deiner Seite geht hier -->
-  <section>
-    <h2>Über uns</h2>
-    <p>Hier steht Text über deine Webseite.</p>
-  </section>
-
-  <section>
-    <h2>Kontakt</h2>
-    <!-- Hier könnten Formulare oder Kontaktinformationen stehen -->
-  </section>
-</main>
-
-<footer>
-  <!-- Der Footer deiner Seite geht hier -->
-  <p>&copy; 2024 Meine Webseite. Alle Rechte vorbehalten.</p>
-</footer>
 
 <!-- Füge hier JavaScript-Dateien oder Skripte hinzu, wenn nötig -->
-
-</body>
 </html>
-

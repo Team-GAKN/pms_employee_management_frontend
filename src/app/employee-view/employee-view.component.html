@@ -3,11 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meine Webseite</title>
-  <!-- Füge hier die Links zu den Stylesheets, JavaScript-Dateien oder anderen externen Ressourcen hinzu -->
-  <header>
-
-</header>
+  <title>Employee Management Service</title>
 </head>
 
 <app-navbar navbarText="Employee Management Service">
@@ -15,6 +11,8 @@
   <app-button [btnClass]="ButtonVariant.Danger" buttonText="Logout"></app-button>
 </app-navbar>
 
+<body>
+  <app-employee-list></app-employee-list>
+</body>
 
-<!-- Füge hier JavaScript-Dateien oder Skripte hinzu, wenn nötig -->
 </html>

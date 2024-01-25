@@ -1,6 +1,7 @@
 import {Injectable} from "@angular/core";
 import {KeycloakAuthGuard, KeycloakService} from "keycloak-angular";
 import {ActivatedRouteSnapshot, Router, RouterStateSnapshot, UrlTree} from "@angular/router";
+import {TokenService} from "../service/token.service";
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,8 @@ import {ActivatedRouteSnapshot, Router, RouterStateSnapshot, UrlTree} from "@ang
 export class AuthGuard extends KeycloakAuthGuard {
   constructor(
     protected override readonly router: Router,
-    protected readonly keycloak: KeycloakService
+    protected readonly keycloak: KeycloakService,
+    private readonly tokenService: TokenService
   ) {
     super(router, keycloak);
   }
@@ -21,6 +23,8 @@ export class AuthGuard extends KeycloakAuthGuard {
       await this.keycloak.login({
         redirectUri: window.location.origin + state.url
       });
+    }else{
+      this.tokenService.setAccessToken(this.keycloak.getKeycloakInstance().token);
     }
 
     return this.authenticated;

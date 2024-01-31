@@ -25,6 +25,7 @@ export class AuthGuard extends KeycloakAuthGuard {
       });
     }else{
       this.tokenService.setAccessToken(this.keycloak.getKeycloakInstance().token);
+      await this.router.navigate(['/overview']);
     }
 
     return this.authenticated;

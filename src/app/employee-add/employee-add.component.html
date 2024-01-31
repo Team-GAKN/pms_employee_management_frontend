@@ -1,0 +1,46 @@
+<div class="component-container">
+    <h2>Personaldaten</h2>
+    <div class="grid-container">
+        <div class="input-container">
+            <p>Vorname</p>
+            <app-input #firstname placeholder="Vorname"></app-input>
+        </div>
+        <div class="input-container">
+            <p>Nachname</p>
+            <app-input #lastname placeholder="Nachname"></app-input>
+        </div>
+        <div class="input-container">
+            <p>Telefonnummer</p>
+            <app-input #phone placeholder="Telefonnummer"></app-input>
+        </div>
+        <div class="input-container">
+            <p>PLZ</p>
+            <app-input #postcode placeholder="PLZ"></app-input>
+        </div>
+        <div class="input-container">
+            <p>Stadt</p>
+            <app-input #city placeholder="Stadt"></app-input>
+        </div>
+        <div class="input-container">
+            <p>Straße</p>
+            <app-input #street placeholder="Straße"></app-input>
+        </div>
+    </div>
+    <!--
+    <div class="qualifications-container">
+        <p>Qualifikationen</p>
+        <div *ngFor="let s of skillSet">
+            <app-qualification-label labelText="{{ s }}"></app-qualification-label>
+        </div>
+    </div>
+    <div class="input-container">
+        <p>Qualifikation</p>
+        <app-input #skill placeholder="Skill"></app-input>
+    </div> -->
+    <div class="button-container">
+        <app-button
+                (buttonClick)="addNewEmployeeToDatabase(firstname.inputValue, lastname.inputValue, phone.inputValue, postcode.inputValue,city.inputValue, street.inputValue)"
+                [btnClass]="ButtonVariant.Success" buttonText="Hinzufügen" routerLink="/overview"></app-button>
+        <app-button [btnClass]="ButtonVariant.Danger" buttonText="Abbrechen" routerLink="/overview"></app-button>
+    </div>
+</div>

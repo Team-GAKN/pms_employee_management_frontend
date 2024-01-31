@@ -1,5 +1,5 @@
 <ul>
   <li *ngFor="let e of employees$ | async">
-    <app-employee-card (cardClick)="handleClick(e)" employeeName=" {{e.firstName + ' ' + e.lastName }} " jobDescription=" {{ 'job Description' }} " ></app-employee-card>
+    <app-employee-card (cardClick)="handleClick(e)" employeeName=" {{e.firstName + ' ' + e.lastName }} " jobDescription=" {{ e.qualifications }} " ></app-employee-card>
   </li>
 </ul>

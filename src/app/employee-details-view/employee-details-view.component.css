@@ -1,66 +1,41 @@
-body {
-    background-color: #000;
-    color: #fff;
-    font-family: sans-serif;
-}
-
-h1 {
-    text-align: center;
-}
-
-main {
-    padding: 20px;
+.component-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  gap: 1rem;
 }
 
 h2 {
-    margin-top: 20px;
+  text-align: center;
 }
 
-form {
-    width: 500px;
-    margin: 0 auto;
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+  grid-template-areas:
+    ". . ."
+    ". . .";
 }
 
-input,
-label {
-    display: block;
-    margin-bottom: 10px;
+.input-container {
+  display: flex;
+  flex-direction: column;
 }
 
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
+.input-container p, .qualifications-container p {
+  margin-bottom: 0.25rem;
 }
 
-input[type="submit"] {
-    background-color: #000;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
+.qualifications-container {
+  display: flex;
+  flex-direction: column;
 }
 
-.qualifikationen {
-    display: flex;
-    flex-direction: column;
-}
-
-.qualifikationen input {
-    margin-bottom: 5px;
-}
-
-.qualifikationen label {
-    font-weight: bold;
-}
-
-footer {
-    text-align: center;
-}
-
-.buttons {
-    position: absolute;
-    bottom: 0;
-    right: 50%;
-    transform: translateX(-50%);
+.button-container {
+  display: flex;
+  justify-content: end;
+  gap: 0.5rem;
 }

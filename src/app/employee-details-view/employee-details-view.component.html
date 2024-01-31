@@ -1,39 +1,43 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <title>Mitarbeiter Details</title>
-</head>
-<body>
-<main>
-    <form>
-        <h2>Mitarbeiter Details</h2>
-        <p>Vorname</p>
-        <app-input [isReadOnly]="true" inputValue="{{ employee?.firstName }}" placeholder="Vorname"></app-input>
-        <p>Nachname</p>
-        <app-input [isReadOnly]="true" inputValue="{{ employee?.lastName }}" placeholder="Nachname"></app-input>
-        <p>Telefonnummer</p>
-        <app-input [isReadOnly]="true" inputValue="{{ employee?.phone }}" placeholder="Telefonnummer"></app-input>
-        <p>PLZ</p>
-        <app-input [isReadOnly]="true"´inputValue="{{ employee?.postcode }}" placeholder="PLZ"></app-input>
-        <p>Stadt</p>
-        <app-input [isReadOnly]="true" inputValue="{{ employee?.city }}" placeholder="Stadt"></app-input>
-        <p>Straße</p>
-        <app-input [isReadOnly]="true" inputValue="{{ employee?.street }}" placeholder="Straße"></app-input>
-        <p>Qualifikationen</p>
-        <ul>
-            <li *ngFor="let qualifications of employee?.qualifications">
-                <app-qualification-label labelText=" {{ qualifications.skill }}"></app-qualification-label>
-            </li>
-        </ul>
-        <app-qualification-label labelText="Java"></app-qualification-label>
-        <div>
-            <app-button [btnClass]="ButtonVariant.Success" buttonText="bearbeiten"></app-button>
-            <app-button [btnClass]="ButtonVariant.Danger" buttonText="abbrechen"></app-button>
-        </div>
-    </form>
-</main>
-<footer>
-    &copy; 2024 Project Management Service
-</footer>
-</body>
-</html>
+<div class="component-container">
+  <h2>Mitarbeiter Details</h2>
+  <div class="grid-container">
+    <div class="input-container">
+      <p>Vorname</p>
+      <app-input [isReadOnly]="true" inputValue="{{ employee?.firstName }}" placeholder="Vorname"></app-input>
+    </div>
+    <div class="input-container">
+      <p>Nachname</p>
+      <app-input [isReadOnly]="true" inputValue="{{ employee?.lastName }}" placeholder="Nachname"></app-input>
+    </div>
+    <div class="input-container">
+      <p>Telefonnummer</p>
+      <app-input [isReadOnly]="true" inputValue="{{ employee?.phone }}" placeholder="Telefonnummer"></app-input>
+    </div>
+    <div class="input-container">
+      <p>PLZ</p>
+      <app-input [isReadOnly]="true" inputValue="{{ employee?.postcode }}" placeholder="PLZ"></app-input>
+    </div>
+    <div class="input-container">
+      <p>Stadt</p>
+      <app-input [isReadOnly]="true" inputValue="{{ employee?.city }}" placeholder="Stadt"></app-input>
+    </div>
+    <div class="input-container">
+      <p>Straße</p>
+      <app-input [isReadOnly]="true" inputValue="{{ employee?.street }}" placeholder="Straße"></app-input>
+    </div>
+  </div>
+  <div class="qualifications-container">
+    <p>Qualifikationen</p>
+    <div>
+      <ul>
+        <li *ngFor="let qualifications of employee?.qualifications">
+          <app-qualification-label labelText=" {{ qualifications.skill }}"></app-qualification-label>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="button-container">
+    <app-button [btnClass]="ButtonVariant.Success" buttonText="Bearbeiten"></app-button>
+    <app-button [btnClass]="ButtonVariant.Danger" buttonText="Abbrechen" routerLink="/overview"></app-button>
+  </div>
+</div>

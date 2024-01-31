@@ -19,5 +19,4 @@ export class EmployeeViewComponent {
   constructor(private employeeDataService: EmployeeDataService) {
   }
 
-
 }

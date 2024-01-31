@@ -1,17 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Employee Management Service</title>
-</head>
-
-<body>
-<app-navbar navbarText="Employee Management Service">
-  <app-button [btnClass]="ButtonVariant.Success" buttonText="Mitarbeiter anlegen"></app-button>
-  <app-button [btnClass]="ButtonVariant.Danger" buttonText="Logout"></app-button>
-</app-navbar>
-<app-employee-list></app-employee-list>
-</body>
-
-</html>
+<ul>
+  <li *ngFor="let e of employees$ | async">
+    <app-employee-card employeeName=" {{e.firstName + ' ' + e.lastName }} " jobDescription=" {{ 'job Description' }} " ></app-employee-card>
+  </li>
+</ul>

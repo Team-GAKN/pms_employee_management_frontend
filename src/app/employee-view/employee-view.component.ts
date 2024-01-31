@@ -5,6 +5,8 @@ import {HttpClient, HttpClientModule, HttpHeaders} from "@angular/common/http";
 import {Employee} from "../Employee";
 import {EmployeeCardComponent} from "../employee-card/employee-card.component";
 import {TokenService} from "../service/token.service";
+import {Router} from "@angular/router";
+import {EmployeeSharingService} from "../service/employee-sharing.service";
 
 @Component({
   selector: 'app-employee-view',
@@ -17,7 +19,7 @@ export class EmployeeViewComponent {
   bearer = this.tokenService.getAccessToken();
   employees$: Observable<Employee[]>;
 
-  constructor(private http: HttpClient, private tokenService: TokenService) {
+  constructor(private http: HttpClient, private tokenService: TokenService, private router: Router, private dataSharingService: EmployeeSharingService) {
     this.employees$ = of([]);
     this.fetchData();
   }
@@ -28,5 +30,10 @@ export class EmployeeViewComponent {
         .set('Content-Type', 'application/json')
         .set('Authorization', `Bearer ${this.bearer}`)
     });
+  }
+
+  handleClick(selectedEmployee: Employee) {
+    this.dataSharingService.setEmployee(selectedEmployee);
+    this.router.navigate(['/details', { state: {selectedEmployee}}]);
   }
 }

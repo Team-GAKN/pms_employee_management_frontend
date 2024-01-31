@@ -7,21 +7,27 @@
 <main>
     <form>
         <h2>Mitarbeiter Details</h2>
-        <app-input placeholder="Vorname"></app-input>
+        <p>Vorname</p>
+        <app-input [isReadOnly]="true" inputValue="{{ employee?.firstName }}" placeholder="Vorname"></app-input>
         <p>Nachname</p>
-        <app-input placeholder="Nachname"></app-input>
+        <app-input [isReadOnly]="true" inputValue="{{ employee?.lastName }}" placeholder="Nachname"></app-input>
         <p>Telefonnummer</p>
-        <app-input placeholder="Telefonnummer"></app-input>
+        <app-input [isReadOnly]="true" inputValue="{{ employee?.phone }}" placeholder="Telefonnummer"></app-input>
         <p>PLZ</p>
-        <app-input placeholder="PLZ"></app-input>
+        <app-input [isReadOnly]="true"´inputValue="{{ employee?.postcode }}" placeholder="PLZ"></app-input>
         <p>Stadt</p>
-        <app-input placeholder="Stadt"></app-input>
+        <app-input [isReadOnly]="true" inputValue="{{ employee?.city }}" placeholder="Stadt"></app-input>
         <p>Straße</p>
-        <app-input placeholder="Straße"></app-input>
+        <app-input [isReadOnly]="true" inputValue="{{ employee?.street }}" placeholder="Straße"></app-input>
         <p>Qualifikationen</p>
+        <ul>
+            <li *ngFor="let qualifications of employee?.qualifications">
+                <app-qualification-label labelText=" {{ qualifications.skill }}"></app-qualification-label>
+            </li>
+        </ul>
         <app-qualification-label labelText="Java"></app-qualification-label>
         <div>
-            <app-button [btnClass]="ButtonVariant.Success" buttonText="hinzufügen"></app-button>
+            <app-button [btnClass]="ButtonVariant.Success" buttonText="bearbeiten"></app-button>
             <app-button [btnClass]="ButtonVariant.Danger" buttonText="abbrechen"></app-button>
         </div>
     </form>

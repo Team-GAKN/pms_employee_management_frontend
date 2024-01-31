@@ -1,6 +1,6 @@
 <app-navbar navbarText="Employee Management Service">
-  <app-button *ngIf="isOverviewPage"  [btnClass]="ButtonVariant.Success" buttonText="Mitarbeiter anlegen"></app-button>
-  <app-button [btnClass]="ButtonVariant.Danger" buttonText="Logout"></app-button>
+  <app-button *ngIf="isOverviewPage" [btnClass]="ButtonVariant.Success" buttonText="Mitarbeiter anlegen"></app-button>
+  <app-button [btnClass]="ButtonVariant.Danger" buttonText="Logout" (buttonClick)="logOut()"></app-button>
 </app-navbar>
 
 <div class="routes-container">

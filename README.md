@@ -95,5 +95,5 @@ Des Weiteren ist der Client mit der Bezeichnung employee-management-service-fron
 
 # Bugs
 
-Trage hier die Features ein, die nicht funktionieren. Beschreibe den jeweiligen Fehler. 
-
+- **Mitarbeiterübersicht**
+  - Nach dem Bearbeiten eines Mitarbeiters muss die Übersicht manuell neu geladen werden, um die Änderungen sehen zu können.

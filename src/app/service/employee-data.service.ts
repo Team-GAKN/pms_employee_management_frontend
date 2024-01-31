@@ -41,7 +41,7 @@ export class EmployeeDataService {
       );
   }
 
-  updateEmployee(id: number, employee: Employee) {
+  updateEmployee(id: number | undefined, employee: Employee) {
     this.http.put(`http://localhost:8089/employees/${id}`, employee, {
       headers: new HttpHeaders()
         .set('Content-Type', 'application/json')

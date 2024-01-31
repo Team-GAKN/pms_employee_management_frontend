@@ -7,11 +7,12 @@ import {AppInputComponent} from "../app-input/app-input.component";
 import {QualificationLabelComponent} from "../qualification-label/qualification-label.component";
 import {Employee} from "../Employee";
 import {FormsModule} from "@angular/forms";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-employee-add',
   standalone: true,
-  imports: [CommonModule, AppNavbarComponent, AppButtonComponent, AppInputComponent, QualificationLabelComponent, FormsModule],
+  imports: [CommonModule, AppNavbarComponent, AppButtonComponent, AppInputComponent, QualificationLabelComponent, FormsModule, RouterLink],
   templateUrl: './employee-add.component.html',
   styleUrl: './employee-add.component.css'
 })

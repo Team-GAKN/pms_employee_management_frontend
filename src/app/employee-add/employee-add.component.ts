@@ -8,6 +8,9 @@ import {QualificationLabelComponent} from "../qualification-label/qualification-
 import {Employee} from "../Employee";
 import {FormsModule} from "@angular/forms";
 import {RouterLink} from "@angular/router";
+import {EmployeeDataService} from "../service/employee-data.service";
+import {Qualification} from "../Qualification";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-employee-add',
@@ -20,9 +23,17 @@ export class EmployeeAddComponent {
   protected readonly ButtonVariant = ButtonVariant;
 
   employee: Employee | undefined;
+  skillSet: Observable<Qualification[]> = this.employeeDataService.getAllQualifications();
+  skill: string = "";
 
-  updateData(firstname: string, lastname: string, phone: string, postcode: string, city: string, street: string) {
+  constructor(private employeeDataService: EmployeeDataService) {
+
+  }
+
+  addNewEmployeeToDatabase(firstname: string, lastname: string, phone: string, postcode: string, city: string, street: string) {
     this.employee = new Employee(undefined ,firstname, lastname, phone, postcode, city, street);
+
+    this.employeeDataService.createEmployee(this.employee);
   }
 
 

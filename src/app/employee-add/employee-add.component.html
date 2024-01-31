@@ -26,20 +26,21 @@
             <app-input #street placeholder="Straße"></app-input>
         </div>
     </div>
+    <!--
     <div class="qualifications-container">
         <p>Qualifikationen</p>
-        <div>
-            <ul>
-                <li *ngFor="let qualifications of employee?.qualifications">
-                    <app-qualification-label labelText=" {{ qualifications.skill }}"></app-qualification-label>
-                </li>
-            </ul>
+        <div *ngFor="let s of skillSet">
+            <app-qualification-label labelText="{{ s }}"></app-qualification-label>
         </div>
     </div>
+    <div class="input-container">
+        <p>Qualifikation</p>
+        <app-input #skill placeholder="Skill"></app-input>
+    </div> -->
     <div class="button-container">
         <app-button
-                (buttonClick)="updateData(firstname.inputValue, lastname.inputValue, phone.inputValue, postcode.inputValue,city.inputValue, street.inputValue)"
-                [btnClass]="ButtonVariant.Success" buttonText="hinzufügen"></app-button>
-        <app-button [btnClass]="ButtonVariant.Danger" buttonText="abbrechen" routerLink="/overview"></app-button>
+                (buttonClick)="addNewEmployeeToDatabase(firstname.inputValue, lastname.inputValue, phone.inputValue, postcode.inputValue,city.inputValue, street.inputValue)"
+                [btnClass]="ButtonVariant.Success" buttonText="Hinzufügen" routerLink="/overview"></app-button>
+        <app-button [btnClass]="ButtonVariant.Danger" buttonText="Abbrechen" routerLink="/overview"></app-button>
     </div>
 </div>

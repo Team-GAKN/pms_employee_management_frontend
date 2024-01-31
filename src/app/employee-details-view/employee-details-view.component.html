@@ -1,36 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Employee Management Service</title>
+    <title>Mitarbeiter Details</title>
 </head>
-
-<app-navbar navbarText="Employee Management Service">
-  <app-button [btnClass]="ButtonVariant.Success" buttonText="Mitarbeiter anlegen"></app-button>
-  <app-button [btnClass]="ButtonVariant.Danger" buttonText="Logout"></app-button>
-</app-navbar>
-
 <body>
-<h3>Mitarbeiterdetails</h3>
-<p>Vorname</p>
-<div style="width: 300px">
-  <app-input inputValue="Vorname"></app-input>
-  <p>Nachname</p>
-  <app-input inputValue="Nachname"></app-input>
-  <p>Telefonnummer</p>
-  <app-input inputValue="Telefonnummer"></app-input>
-  <p>PLZ</p>
-  <app-input inputValue="PLZ"></app-input>
-  <p>Stadt</p>
-  <app-input inputValue="Stadt"></app-input>
-  <p>Straße</p>
-  <app-input inputValue="Straße"></app-input>
-  <p>Qualifikationen</p>
-  <app-qualification-label labelText="Java"></app-qualification-label>
-</div>
-<div class="button-position">
-  <app-button [btnClass]="ButtonVariant.Success" buttonText="bearbeiten" style="margin-left: auto"></app-button>
-  <app-button [btnClass]="ButtonVariant.Danger" buttonText="zurück"></app-button>
-</div>
+<main>
+    <form>
+        <h2>Mitarbeiter Details</h2>
+        <app-input placeholder="Vorname"></app-input>
+        <p>Nachname</p>
+        <app-input placeholder="Nachname"></app-input>
+        <p>Telefonnummer</p>
+        <app-input placeholder="Telefonnummer"></app-input>
+        <p>PLZ</p>
+        <app-input placeholder="PLZ"></app-input>
+        <p>Stadt</p>
+        <app-input placeholder="Stadt"></app-input>
+        <p>Straße</p>
+        <app-input placeholder="Straße"></app-input>
+        <p>Qualifikationen</p>
+        <app-qualification-label labelText="Java"></app-qualification-label>
+        <div>
+            <app-button [btnClass]="ButtonVariant.Success" buttonText="hinzufügen"></app-button>
+            <app-button [btnClass]="ButtonVariant.Danger" buttonText="abbrechen"></app-button>
+        </div>
+    </form>
+</main>
+<footer>
+    &copy; 2024 Project Management Service
+</footer>
 </body>
+</html>

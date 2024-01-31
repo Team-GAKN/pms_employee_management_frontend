@@ -39,7 +39,7 @@
   <div class="button-container">
     <app-button (buttonClick)="updateEmployeeData(firstname.inputValue, lastname.inputValue, phone.inputValue,
     postcode.inputValue, city.inputValue, street.inputValue)"
-                [btnClass]="ButtonVariant.Success" buttonText="Übernehmen"></app-button>
+                [btnClass]="ButtonVariant.Success" buttonText="Übernehmen" routerLink="/overview"></app-button>
     <app-button [btnClass]="ButtonVariant.Danger" buttonText="Abbrechen" routerLink="/overview"></app-button>
   </div>
 </div>

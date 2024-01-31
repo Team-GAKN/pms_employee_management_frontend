@@ -15,6 +15,7 @@ export class AppInputComponent {
   @Input() inputValue: string = '';
   @Input() inputType: InputType = InputType.Text;
   @Input() placeholder: string = 'Example placeholder';
+  @Input() isReadOnly: boolean = false;
   @Output() valueChange = new EventEmitter<string>();
 
   onInputChange(): void {

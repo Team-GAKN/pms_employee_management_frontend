@@ -3,12 +3,13 @@ import { CommonModule } from '@angular/common';
 import {Observable, of} from "rxjs";
 import {HttpClient, HttpClientModule, HttpHeaders} from "@angular/common/http";
 import {Employee} from "../Employee";
+import {EmployeeCardComponent} from "../employee-card/employee-card.component";
 import {TokenService} from "../service/token.service";
 
 @Component({
   selector: 'app-employee-list',
   standalone: true,
-  imports: [CommonModule, HttpClientModule],
+  imports: [CommonModule, HttpClientModule, EmployeeCardComponent],
   templateUrl: './employee-list.component.html',
   styleUrl: './employee-list.component.css'
 })

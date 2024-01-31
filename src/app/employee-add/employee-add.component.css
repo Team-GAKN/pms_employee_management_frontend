@@ -1,0 +1,59 @@
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+form {
+  width: 500px;
+  margin: 0 auto;
+}
+
+input,
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.qualifikationen {
+  display: flex;
+  flex-direction: column;
+}
+
+.qualifikationen input {
+  margin-bottom: 5px;
+}
+
+.qualifikationen label {
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+}

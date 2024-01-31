@@ -1,7 +1,7 @@
 import { KeycloakService } from 'keycloak-angular';
 import { APP_INITIALIZER, ApplicationConfig } from '@angular/core';
 import { provideRouter } from '@angular/router';
-import { routes } from "./app-routing.module";
+import { routes } from "./app.routes";
 
 function initializeKeycloak(keycloak: KeycloakService) {
   return () =>

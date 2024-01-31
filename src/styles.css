@@ -1,9 +1,13 @@
-body {
-  height: 100vh;
-  width: 100vw;
+body, html, app-root {
+  height: 100%;
+  width: 100%;
+}
+
+undefined {
+  flex: 1;
 }
 
 app-root {
-  height: 100%;
-  width: 100%;
+  display: flex;
+  flex-flow: column;
 }

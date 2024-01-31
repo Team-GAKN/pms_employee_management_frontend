@@ -1,9 +1,12 @@
-body {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 12fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    "."
-    ".";
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: start;
 }
